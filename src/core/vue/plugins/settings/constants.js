@@ -62,7 +62,7 @@ export const settingsMapPriority = ({
  * @property {boolean} pages.product.show_subscription_details_icon - Boolean indicating whether Recharge icon is displayed in subscription details.
  * @property {boolean} pages.product.preview_modal - Should the preview modal show when an user buys a product.
  * @property {('black'|'white')} pages.product.widget_icon - Color of the Recharge icon within the widget.
- * @property {string} pages.product.widget_template_type - TODO @zpyoung needs to fill this.
+ * @property {string} pages.product.widget_template_type
  *
  * @property {object} pages.checkout - Checkout Page specific settings.
  * @property {string} pages.checkout.checkout_url - Store's URL for doing checkout.

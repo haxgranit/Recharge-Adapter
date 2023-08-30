@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "private": true,
     "description": "",
-    "author": "zpyoung <zach@fabledfreedom.com>",
     "scripts": {
         "build:version": "node scripts/build_version.js",
         "build": "cross-env NODE_ENV=production webpack --progress",
