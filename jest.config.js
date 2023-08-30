@@ -1,0 +1,36 @@
+//Sync object
+module.exports = {
+    verbose: true,
+    preset: "@vue/cli-plugin-unit-jest",
+    collectCoverage: false,
+    collectCoverageFrom: [
+        "./src/**/*.{js,jsx,vue}",
+        "!**/coverage/**",
+        "!**/node_modules/**",
+        "!**/vendor/**",
+        "!**/dist/**",
+    ],
+    reporters: ["default", "jest-html-reporters"],
+    moduleFileExtensions: ["js", "jsx", "json", "vue"],
+    roots: ["<rootDir>"],
+    modulePaths: ["rootDir"],
+    moduleDirectories: ["node_modules"],
+    moduleNameMapper: {
+        "^@/(.*)$": "<rootDir>/src/$1",
+        "^@(config/.*)$": "<rootDir>/$1",
+        "^@(types)$": "<rootDir>/src/core/libs/$1",
+    },
+    setupFiles: ["./tests/unit/helpers.js"],
+    setupFilesAfterEnv: ["./tests/test_utils/defaultMocks.js"],
+    globalSetup: "./scripts/build_version.js",
+    snapshotSerializers: ["jest-serializer-vue"],
+    testEnvironment: "jsdom",
+    testMatch: ["**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"],
+    transform: {
+        "^.+\\.vue$": "vue-jest",
+        ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+        "^.+\\.jsx?$": "babel-jest",
+    },
+    transformIgnorePatterns: ["/node_modules/"],
+    watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
+};

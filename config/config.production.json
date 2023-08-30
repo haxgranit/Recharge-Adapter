@@ -1,0 +1,10 @@
+{
+    "BIGCOMMERCE_APP_URL": "https://api.rechargeadapter.com/",
+    "CURRENTCUSTOMER_APP_CLIENT_ID": "435f5mpvck0nyz1rmaukw8g5schaz26",
+    "RECHARGE_CHECKOUT_URL": "https://checkout.rechargeapps.com",
+    "RECHARGE_APP_DOMAIN": "https://admin.rechargeapps.com",
+    "SENTRY_DSN": "https://b2575e4b0fa142f5b09737c2c31da904@o417354.ingest.sentry.io/5336934",
+    "storeInfoMaxAge": 300000,
+    "appDisabledTime": 60000,
+    "publicPath" : "https://app-data-prod.rechargeadapter.com/static/js/"
+}

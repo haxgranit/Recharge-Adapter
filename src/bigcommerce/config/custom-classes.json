@@ -1,0 +1,1605 @@
+{
+    "custom_classes_settings": {
+        "comments": {
+            "about": "aditional config for custom classes. it's ignored by custom_classes vue plugin.",
+            "themes": "set the current list of themes that need selectors support and its order. set it from more specific to default.",
+            "mode": {
+                "multi": "select as much elements as possible from all listed selectors",
+                "firstSelector": "select as much elements as possible from first selector that has elements",
+                "single": "select first element found from first selector that has elements"
+            }
+        },
+        "themes": ["default", "fab", "skinelite", "vitalzeal", "arcane", "roots", "lifestyle", "capacityBright", "fortune", "merchant", "murad", "soho", "embroideryOnline","cancerScreeningTrust", "prosper", "venture"]
+    },
+    "all": {
+        "checkout_button": {
+            "required": true,
+            "description": "Selector for any checkout button",
+            "custom_class": "rca-checkout-button",
+            "selectors": {
+                "default": [
+                    "[action*=\"checkout\"] > button",
+                    "[href*=\"checkout\"]"
+                ]
+            }
+        },
+        "nav_user": {
+            "required": true,
+            "description": "Selector for the navigation bar where the cart dropdown lives",
+            "custom_class": "rca-navUser",
+            "selectors": {
+                "default": [
+                    ".navUser"
+                ],
+                "skinelite": [
+                    ".header-middle .right"
+                ],
+                "capacityBright": [
+                    ".header-tools"
+                ],
+                "fortune": [
+                    ".main-header-menu"
+                ],
+                "merchant": [
+                    "[data-header-container] .container"
+                ],
+                "murad": [
+                    ".header-container .header-account-items"
+                ],
+                "embroideryOnline": [
+                    ".header__prime--container"
+                ],
+                "soho": [
+                    ".header-tools"
+                ],
+                "cancerScreeningTrust": [
+                    ".header-top-bar .header-tools-list"
+                ],
+                "prosper": [
+                    ".header-tools"
+                ],
+                "venture": [
+                    ".cart-header"
+                ]
+            }
+        },
+        "generic_hide": {
+            "required": false,
+            "description": "Custom class used to hide elements when the adapter is active.",
+            "custom_class": "rca-hide-element",
+            "selectors": {
+                "default": [],
+                "fortune": [
+                    ".quick-cart-subtotal"
+                ],
+                "venture": [
+                    ".quick-cart .cart-footer .subtotal"
+                ],
+                "prosper": [
+                    ".cart-totals-wrapper .cart-totals .cart-subtotal-wrapper"
+                ]
+            }
+        },
+        "quick_search": {
+            "required": false,
+            "description": "Custom class to quick search container",
+            "custom_class": "rca-quick-search",
+            "selectors": {
+                "default": [
+                    ".quickSearchResults"
+                ]
+            }
+        }
+    },
+    "account": {
+        "all_mobile_menu_account_section": {
+            "required": true,
+            "description": "Selector for mobile navigation in account page",
+            "custom_class": "rca-all-mobile-menu-account-section",
+            "mode": "single",
+            "selectors": {
+                "default": [
+                    "#navPages-account > .navPage-subMenu-list"
+                ],
+                "fortune": [
+                    "[data-menu] .navPages-list--user"
+                ]
+            }
+        },
+        "all_mobile_menu_account_section_fab": {
+            "required":false,
+            "description": "Selector for mobile navigation on FAB store.",
+            "custom_class": "rca-mobile-account-fab",
+            "mode": "single",
+            "selectors" : {
+                "fab": [
+                    ".accountlist-content .nav-list-mobile > #myAccountList.navBar-section"
+                ]
+            }
+
+        },
+        "account_manage_subscriptions": {
+            "required": true,
+            "description": "Class added to the manage subscription link. This class is added by the adapter",
+            "custom_class": "rca-manage-subscriptions",
+            "selectors": {
+                "default": []
+            }
+        },
+        "account_navbar_section": {
+            "required": true,
+            "description": "Selector for navigation bar on account page. Used to insert the manage subscription link",
+            "custom_class": "rca-account-navbar-section",
+            "mode": "single",
+            "selectors": {
+                "default": [
+                    ".navBar--account > .navBar-section",
+                    ".account-nav-list"
+                ],
+                "fab": [
+                    ".accountlist-content .navBar--account > .navBar-section",
+                    ".accountlist-content .nav-list-mobile > .navBar-section"
+                ],
+                "prosper": [
+                    ".account-wrapper .account-nav-list"
+                ],
+                "fortune": [
+                    "[data-menu] .navPages-list--user"
+                ]
+            }
+        }
+    },
+    "cart": {
+        "cart_view": {
+            "required": true,
+            "description": "Selector to check is the page is cart view",
+            "custom_class": "rca-cart-view",
+            "selectors": {
+                "default": [
+                    ".page-content[data-cart]"
+                ],
+                "capacityBright": [
+                    "[data-cart-content]"
+                ],
+                "fortune": [
+                    ".template-cart"    
+                ],
+                "venture": [
+                    ".page-container"
+                ]
+            }
+        },
+        "additional_checkout_buttons": {
+            "required": true,
+            "description": "Selector for additional checkout buttons present in the cart page",
+            "custom_class": "rca-additional-checkout-button",
+            "selectors": {
+                "default": [
+                    ".afterpay-paragraph",
+                    "afterpay-placement",
+                    "[class*=\"-additionalCheckoutButtons\"]"
+                ],
+                "fab": [
+                    ".afterpay-paragraph",
+                    "afterpay-placement",
+                    ".cart-additionalCheckoutButtons"
+                ],
+                "fortune": [
+                    ".additional-checkout-buttons"
+                ],
+                "soho": [
+                    ".cart-additional-checkout-buttons"
+                ]
+            }
+        },
+        "cart_hide_subscription": {
+            "required": true,
+            "description": "Used to hide elements in cart page, preview dropdown and product page",
+            "custom_class": "rca-cart-hide-subscription",
+            "selectors": {
+                "default": [
+                    ".rca-cart-discount",
+                    ".rca-cart-gift",
+                    ".rca-cart-gift-wrapping",
+                    ".rca-cart-taxes",
+                    ".rca-cart-subtotal",
+                    ".rca-cart-banner",
+                    ".rca-cart-shipping",
+                    ".rca-additional-checkout-button",
+                    "[data-cart-totals] .cart-total:contains(\"Default Included in Total:\")",
+                    ".cart-total:has(> .shipping-estimator)"
+                ],
+                "arcane": [
+                    ".dropdown-quick-cart .quick-cart-totals"
+                ],
+                "venture": [
+                    ".cart-content .cart-table-footer table.price-totals-table tr.cart-total",
+                    ".gift-certificate-apply-form"
+                ]
+            }
+        },
+        "header_subtotal_label": {
+            "required": false,
+            "description": "Selector for subtotal header label",
+            "custom_class": "rca-cart-header-subtotal-label",
+            "selectors": {
+                "default": [
+                    "[data-cart-content] .cart-header-item:contains(\"Total\")"
+                ],
+                "capacityBright": [
+                    "[data-cart-content] .cart-header .cart-cell:contains(\"Total\")"
+                ]
+            }
+        },
+        "shipping_label": {
+            "required": true,
+            "description": "Selector for shipping section",
+            "custom_class": "rca-cart-shipping",
+            "selectors": {
+                "default": [
+                    "li:has('#add-shipping')"
+                ],
+                "capacityBright": [
+                    "[data-cart-totals] .cart-totals-row:contains(\"Subtotal\")"
+                ],
+                "merchant": [
+                    ".cart-totals-column .cart-totals-item:contains(\"Shipping\")"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-shipping"
+                ],
+                "prosper": [
+                    ".shipping-calculator-wrapper"
+                ],
+                "venture": [
+                    ".cart-table-footer .price-totals-table tr:first-child"
+                ],
+                "fortune": [
+                    ".cart-total:has(> .shipping-calculator)"
+                ]
+            }
+        },
+        "taxes": {
+            "required": true,
+            "description": "Selector for taxes section",
+            "custom_class": "rca-cart-taxes",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total:contains(\"Tax\")"
+                ],
+                "capacityBright": [
+                    "[data-cart-totals] .cart-totals-row:contains(\"Tax\")"
+                ],
+                "prosper": [
+                    ".main-content .cart-tools .cart-totals-wrapper .cart-totals .cart-total-wrapper"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-tax"
+                ]
+            }
+        },
+        "taxes_label": {
+            "required": false,
+            "description": "Selector for taxes header label",
+            "custom_class": "rca-cart-taxes-label",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total-label:contains(\"Tax\") strong"
+                ],
+                "capacityBright": [
+                    "[data-cart-totals] .cart-totals-label:contains(\"Tax\")"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-tax .cart-total-item-label"
+                ]
+            }
+        },
+        "taxes_value": {
+            "required": false,
+            "description": "Selector for taxes value item",
+            "custom_class": "rca-cart-taxes-value",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total:contains(\"Tax\") .cart-total-value span"
+                ],
+                "capacityBright": [
+                    "[data-cart-totals] .cart-totals-row:contains(\"Tax\") .cart-totals-value span"
+                ],
+                "fortune": [
+                    "[data-cart-totals] .cart-total:contains(\"Tax\") span.cart-total-value"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-tax .cart-total-item-value"
+                ]
+            }
+        },
+        "subtotal": {
+            "required": true,
+            "description": "Selector for subtotal section",
+            "custom_class": "rca-cart-subtotal",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total:contains(\"Subtotal\")"
+                ],
+                "capacityBright": [
+                    ".cart-totals-rows .cart-totals-row:contains(\"Subtotal\")"
+                ],
+                "fab": [
+                    "[data-cart-totals] .cart-total:contains(\"Subtotal\")",
+                    "[data-cart-totals] .cart-total:contains(\"Product Total:\")"
+                ],
+                "merchant": [
+                    ".cart-totals-column .cart-sub-total"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-subtotal:contains(${subtotalText})"
+                ],
+                "venture": [
+                    ".cart-table-footer .price-totals-table tr:first-child"
+                ]
+            }
+        },
+        "subtotal_label": {
+            "required": true,
+            "description": "Selector for subtotal label",
+            "custom_class": "rca-cart-subtotal-label",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total-label:contains(\"Subtotal\") strong"
+                ],
+                "capacityBright": [
+                    "[data-cart-totals] .cart-totals-label:contains(\"Subtotal\")"
+                ],
+                "fortune": [
+                    ".rca-cart-subtotal .cart-total-label"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-subtotal:contains(${subtotalText}) .cart-total-item-label"
+                ],
+                "prosper": [
+                    ".cart-subtotal-wrapper .cart-total-label"
+                ],
+                "venture": [
+                    ".cart-table-footer .price-totals-table tr:first-child td:first-child"
+                ]
+            }
+        },
+        "subtotal_value": {
+            "required": true,
+            "description": "Selector for subtotal value item",
+            "custom_class": "rca-cart-subtotal-value",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total:contains(\"Subtotal\") .cart-total-value span"
+                ],
+                "capacityBright": [
+                    "[data-cart-totals] .cart-totals-row:contains(\"Subtotal\") .cart-totals-value span"
+                ],
+                "fortune": [
+                    ".rca-cart-subtotal .cart-total-value"
+                ],
+                "merchant": [
+                    ".cart-sub-total .cart-total-item"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-subtotal:contains(${subtotalText}) .cart-total-item-value"
+                ],
+                "prosper": [
+                    ".cart-subtotal-wrapper .cart-subtotal"
+                ],
+                "venture": [
+                    ".cart-table-footer .price-totals-table tr:first-child td:last-child"
+                ]
+            }
+        },
+        "grandtotal": {
+            "required": true,
+            "description": "Selector for grandtotal section",
+            "custom_class": "rca-cart-grandtotal",
+            "mode": "single",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total:has(.cart-total-grandTotal)"
+                ],
+                "capacityBright": [
+                    "[data-cart-totals] .cart-totals-row.order-total"
+                ],
+                "fortune": [
+                    ".cart-totals .cart-total-grand-total"
+                ],
+                "merchant": [
+                    ".cart-grand-total.cart-totals-item"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-total"
+                ],
+                "prosper": [
+                    ".cart-totals-wrapper .cart-totals"
+                ],
+                "venture": [
+                    ".cart-content .cart-table-footer .price-totals-table .order-total"
+                ]
+            }
+        },
+        "grandtotal_label": {
+            "required": true,
+            "description": "Selector for grandtotal label",
+            "custom_class": "rca-cart-grandtotal-label",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total-label:contains(\"Grand \") strong"
+                ],
+                "capacityBright": [
+                    "[data-cart-totals] .cart-totals-row.order-total .cart-totals-label"
+                ],
+                "fortune": [
+                    ".rca-cart-totals .cart-total-grand-total .cart-grand-total-label"
+                ],
+                "murad": [
+                    ".cart-total-grandTotalLabel p"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-total .cart-total-label:not(div)"
+                ],
+                "prosper": [
+                    ".cart-totals .section-title"
+                ],
+                "venture": [
+                    ".rca-cart-grandtotal .label"
+                ]
+            }
+        },
+        "grandtotal_value": {
+            "required": true,
+            "description": "Selector for grandtotal value item",
+            "custom_class": "rca-cart-grandtotal-value",
+            "mode": "single",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total-value.cart-total-grandTotal span"
+                ],
+                "capacityBright": [
+                    "[data-cart-totals] .cart-totals-row.order-total .cart-totals-value span"
+                ],
+                "fortune": [
+                    ".cart-grand-total-value"
+                ],
+                "merchant": [
+                    ".cart-grand-total .grand-total"
+                ],
+                "murad": [
+                    "[data-cart-totals] .cart-total-value.cart-total-grandTotal p"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-total .cart-total-value"
+                ],
+                "prosper": [
+                    ".cart-tools .cart-totals-wrapper .cart-totals .cart-price"
+                ],
+                "venture": [
+                    ".rca-cart-grandtotal .value"
+                ]
+            }
+        },
+        "cart_line_item_id_element": {
+            "required": true,
+            "description": "The element that contains the cart line item id",
+            "custom_class": "rca-cart-item-id-element",
+            "selectors": {
+                "default": [
+                    "[data-cart-itemid]"
+                ],
+                "capacityBright": [
+                    "[data-item-id]"
+                ],
+                "merchant": [
+                    ".cart-item .cart-item-text [data-item-edit]"
+                ],
+                "soho": [
+                    "[data-item-id]"
+                ]
+            }
+        },
+        "cart_items": {
+            "required": true,
+            "description": "Selector for the cart content where all the items are displayed",
+            "custom_class": "rca-cart-items",
+            "selectors": {
+                "default": [
+                    "[data-cart-content]"
+                ],
+                "prosper": [
+                    ".cart-items"
+                ],
+                "venture": [
+                    ".page-container"
+                ]
+            },
+            "mutations": {
+                "default": [
+                    "cart"
+                ],
+                "fortune": [
+                    "cart-content"
+                ],
+                "merchant": [
+                    "product-listing"
+                ],
+                "murad": [
+                    "flex-cart"
+                ],
+                "soho": [
+                    "cart-item"
+                ]
+            }
+        },
+        "cart_totals": {
+            "required": true,
+            "description": "Selector for cart totals container",
+            "custom_class": "rca-cart-totals",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals]"
+                ],
+                "venture": [
+                    ".cart-content .cart-table-footer"
+                ]
+            }
+        },
+        "cart_line_item": {
+            "required": true,
+            "description": "Selector for cart item, need to be present on each cart item",
+            "custom_class": "rca-cart-item",
+            "selectors": {
+                "default": [
+                    ".rca-cart-items [data-item-row]"
+                ],
+                "merchant": [
+                    ".rca-cart-items [data-cart-item]"
+                ],
+                "venture": [
+                    ".cart-content .cart-table .cart-item"
+                ],
+                "soho": [
+                    ".cart-content [data-cart-item]"
+                ]
+            },
+            "attributes": {
+                "default": [
+                    "data-cart-itemid"
+                ],
+                "merchant": [
+                    "data-item-id",
+                    "data-item-edit"
+                ],
+                "soho": [
+                    ".rca-cart-items [data-cart-item]"
+                ],
+                "prosper": [
+                    "[data-cart-item]"
+                ]
+            }
+        },
+        "cart_line_item_name": {
+            "required": true,
+            "description": "Selector fot the cart line item name. Used to display the S&S information in the cart page",
+            "custom_class": "rca-cart-item-name",
+            "selectors": {
+                "default": [
+                    ".cart-item-name"
+                ],
+                "capacityBright": [
+                    "[data-cart-item] .cart-item-name"
+                ],
+                "fortune": [
+                    ".cart-item-product-name"
+                ],
+                "merchant": [
+                    ".cart-item .cart-item-text"
+                ],
+                "soho": [
+                    "[data-cart-item] .cart-item-title"
+                ],
+                "prosper": [
+                    "[data-cart-item] .item-title"
+                ],
+                "venture": [
+                    ".cart-item .main-column .cart-item-meta > a .product-name"
+                ]
+            }
+        },
+        "cart_line_item_price": {
+            "required": true,
+            "description": "Selector for cart item price",
+            "custom_class": "rca-cart-item-price",
+            "selectors": {
+                "default": [
+                    "[data-item-row] .cart-item-info > span.cart-item-value:not(.price--discounted)"
+                ],
+                "capacityBright": [
+                    "[data-cart-item] .cart-cell.cart-each span:not(.cart-price-label):not(.price--discounted)"
+                ],
+                "fortune": [
+                    ".rca-cart-item .cart-item-single-price span:not(.cart-item-price-discounted)"
+                ],
+                "merchant": [
+                    ".cart-item-price span:not(.cart-label)"
+                ],
+                "murad": [
+                    ".rca-cart-item .meta.price span"
+                ],
+                "prosper": [
+                    "[data-cart-item] .item-price.money"
+                ],
+                "fab": [
+                  "strong.cart-item-value"
+                ],
+                "venture" : [
+                    ".cart-item-details-container .cart-item-details .cart-content-each .price:last-child"
+                ]
+            }
+        },
+        "cart_line_item_total": {
+            "required": true,
+            "description": "Selector for cart item total price",
+            "custom_class": "rca-cart-item-total",
+            "mode": "firstSelector",
+            "selectors": {
+                "default": [
+                    "[data-item-row] .cart-item-info:last-of-type > .cart-item-value:not(.price--discounted)",
+                    "[data-item-row] .cart-item-info > strong.cart-item-value:not(.price--discounted)"
+                ],
+                "capacityBright": [
+                    "[data-cart-item] .cart-cell.cart-total span:not(.cart-price-label):not(.price--discounted)"
+                ],
+                "fortune": [
+                    ".rca-cart-item .cart-item-price-block span:not(.cart-item-price-discounted)"
+                ],
+                "merchant": [
+                    "[data-cart-item] .cart-item-price:last-of-type > span:not(.cart-label)"
+                ], 
+                "prosper": [
+                    ".cart-wrapper .cart-totals-wrapper .cart-totals"
+                ],
+                "venture": [
+                    ".cart-item-details-container .cart-item-details .cart-content-total .price:last-child"
+                ],
+                "soho": [
+                    "[data-cart-item] .cart-item-details .cart-item-price:not(.price-discounted)"
+                ]
+            }
+        },
+        "cart_line_item_quantity": {
+            "required": true,
+            "description": "Selector for cart item quantity input",
+            "custom_class": "rca-cart-item-quantity",
+            "mode": "firstSelector",
+            "selectors": {
+                "default": [
+                    "[data-item-row] .cart-item-info.cart-item-quantity input",
+                    "[data-item-row] .cart-item-info .cart-item-qty-input"
+                ],
+                "capacityBright": [
+                    "[data-cart-item] .cart-cell.cart-quantity [data-quantity-control-input]"
+                ],
+                "fortune": [
+                    ".rca-cart-item .cart-item-actions .quantity-input"
+                ],
+                "merchant": [
+                    ".quantity-control [data-quantity-control-input]"
+                ],
+                "soho": [
+                    ".rca-cart-item [data-cart-item-quantity] [data-cart-item-quantity-input]"
+                ],
+                "prosper": [
+                    "[data-cart-item] .item-quantity-wrapper input"
+                ],
+                "venture": [
+                    ".cart-item-details-container .cart-item-details .cart-content-quantity .quantity-input"
+                ]
+            }
+        },
+        "cart_line_item_one_time": {
+            "required": false,
+            "description": "Selector for one time product presented in cart",
+            "custom_class": "rca-cart-line-item-one-time",
+            "selectors": {
+                "default": [
+                    "#cartOneTime"
+                ]
+            }
+        },
+        "cart_line_item_subscribe": {
+            "required": false,
+            "description": "Selector for subscription product presented in cart",
+            "custom_class": "rca-cart-line-item-subscribe",
+            "selectors": {
+                "default": [
+                    "#cartSubscribe"
+                ]
+            }
+        },
+        "cart_discount": {
+            "required": true,
+            "description": "Selector for cart discount section",
+            "custom_class": "rca-cart-discount",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total:contains(\"Discount\")"
+                ],
+                "prosper": [
+                    "[data-cart-totals] .cart-total-wrapper:nth-child(1)"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-subtotal:contains(${discountText})"
+                ]
+            }
+        },
+        "cart_coupon": {
+            "required": true,
+            "description": "Selector for cart coupon section",
+            "custom_class": "rca-cart-coupon",
+            "selectors": {
+                "default": [
+                    "li:has('.coupon-code-add')"
+                ],
+                "capacityBright": [
+                    "[data-cart-totals] .cart-totals-row:has([data-coupon-code-form])"
+                ],
+                "fortune": [
+                    "[data-cart-totals] .coupon-code-wrapper"
+                ],
+                "merchant": [
+                    ".cart-totals .coupon-code"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-coupon"
+                ],
+                "prosper": [
+                    "[data-cart-totals] .coupon-code-wrapper"
+                ],
+                "venture": [
+                    ".cart-content .cart-table-footer .coupon-code-apply-form"
+                ]
+            }
+        },
+        "cart_coupon_applied": {
+            "required": true,
+            "description": "Selector for cart coupon element when coupon is applied",
+            "custom_class": "rca-cart-coupon-value",
+            "selectors": {
+                "default": [
+                    ".cart-total:has([href*=\"removecoupon\"])"
+                ],
+                "prosper": [
+                    ".cart-totals-wrapper .cart-totals .coupon-code-wrapper"
+                ],
+                "venture": [
+                    ".coupon-code-apply-form .input-appended .form-input-wrapper > input[type='text']"
+                ],
+                "soho": [
+                    ".cart-coupon:has([href*=\"removecoupon\"])"
+                ]
+            }
+        },
+        "cart_coupon_applied_value": {
+            "required": true,
+            "description": "Selector for cart coupon element value when coupon is applied",
+            "custom_class": "rca-cart-coupon-value",
+            "selectors": {
+                "default": [
+                    ".cart-total:has([href*=\"removecoupon\"]) .cart-total-value span"
+                ],
+                "prosper": [
+                    ".cart-total-wrapper .discount-form .form-field .form-label .form-label-text .form-input"
+                ],
+                "soho": [
+                    ".cart-coupon:has([href*=\"removecoupon\"]) .cart-total-item-value"
+                ]
+            }
+        },
+        "cart_gift_wrapping": {
+            "required": false,
+            "description": "Selector for cart gift wrapping section",
+            "custom_class": "rca-cart-gift-wrapping",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total:contains(\"Gift wrapping\")",
+                    "[data-cart-totals] .cart-total:contains(\"Gift Wrapping\")"
+                ]
+            }
+        },
+        "cart_gift": {
+            "required": false,
+            "description": "Selector for cart gift section",
+            "custom_class": "rca-cart-gift",
+            "selectors": {
+                "default": [
+                    "[data-cart-totals] .cart-total:contains(\"Gift Certificate\")"
+                ],
+                "capacityBright": [
+                    "[data-cart-totals] .cart-totals-row:has([data-gift-certificate-form])"
+                ],
+                "merchant": [
+                    ".cart-totals .gift-certificates"
+                ],
+                "soho": [
+                    "[data-cart-totals] .cart-gift-certificates"
+                ],
+                "prosper": [
+                    "[data-giftcard-wrapper]"
+                ]
+            }
+        },
+        "banner": {
+            "required": false,
+            "description": "Selector for information banner in cart",
+            "custom_class": "rca-cart-banner",
+            "selectors": {
+                "default": [
+                    ".alertBox"
+                ]
+            }
+        },
+        "cart_remove": {
+            "required": true,
+            "description": "Selector for cart remove button for cart item",
+            "custom_class": "rca-cart-remove",
+            "selectors": {
+                "default": [
+                    ".rca-cart-item .cart-remove"
+                ],
+                "fortune": [
+                    ".rca-cart-item .cart-item-remove"
+                ],
+                "venture": [
+                    ".cart-item .cart-item-meta .actions .remove-item"
+                ]
+            },
+            "attributes": {
+                "default": [
+                    "data-cart-itemid"
+                ],
+                "fortune": [
+                    "data-item-id"
+                ]
+            }
+        },
+        "cart_remove_sample": {
+            "required": false,
+            "description": "Selector for cart remove sample",
+            "custom_class": "rca-cart-remove-sample",
+            "selectors": {
+                "default": [
+                    ".cart-remove-sample"
+                ]
+            }
+        }
+    },
+    "cart_dropdown": {
+        "cart_dropdown": {
+            "required": true,
+            "description": "Selector for the cart navigation dropdown element (if dropdown exists), should be the parent class under which the sidebar dropdown lives.",
+            "custom_class": "rca-cart-dropdown",
+            "selectors": {
+                "default": [
+                    "#cart-preview-dropdown",
+                    ".navUser-item .navUser-item--cart"
+                ],
+                "capacityBright": [
+                    "[data-cart-preview-container]"
+                ],
+                "fortune": [
+                    ".navigation-wrap #header-cart-pane"
+                ],
+                "merchant": [
+                    ".mini-cart-wrap .mini-cart"
+                ],
+                "murad": [
+                    ".navigation-item-dropdown .dropdown-content",
+                    ".mini-cart-dropdown-menu"
+                ],
+                "soho": [
+                    ".header-tools"
+                ],
+                "cancerScreeningTrust": [
+                    "[data-mini-cart]"
+                ],
+                "prosper": [
+                    ".cart-sidebar-wrapper"
+                ],
+                "venture": [
+                    ".header-cart-container"
+                ]
+            },
+            "mutations": {
+                "default": [
+                    "previewCartWrapper",
+                    "previewCart"
+                ],
+                "fortune": [
+                    "quick-cart-content-area"
+                ],
+                "capacityBright": [
+                    "visible"
+                ],
+                "merchant": [
+                    "mini-cart-item"
+                ],
+                "prosper": [
+                    "cart-sidebar"
+                ],
+                "soho": [
+                    "header-tools-cart"
+                ]
+            }
+        },
+        "cart_dropdown_inner": {
+            "required": false,
+            "description": "Selector for inner div of the cart navigation dropdown. Used only for specific themes",
+            "custom_class": "rca-cart-dropdown-inner",
+            "selectors": {
+                "default": [],
+                "skinelite": [
+                    ".cart-preview-inner"
+                ],
+                "arcane": [
+                    ".dropdown-column-quick-cart"
+                ],
+                "prosper": [
+                    ".cart-sidebar-details"
+                ]
+            }
+        },
+        "cart_dropdown_content": {
+            "required": true,
+            "description": "Selector for cart navigation dropdown content.",
+            "custom_class": "rca-cart-dropdown-content",
+            "mode": "firstSelector",
+            "selectors": {
+                "default": [
+                    ".previewCartItem-content"
+                ],
+                "skinelite": [
+                    ".previewCartItem-name"
+                ],
+                "capacityBright": [
+                    ".cart-preview-list-item"
+                ],
+                "arcane": [
+                    ".dropdown-column-quick-cart"
+                ],
+                "fortune": [
+                    ".quick-cart-content-area .quick-cart-item"
+                ],
+                "merchant": [
+                    ".mini-cart-inner .mini-cart-item-description"
+                ],
+                "murad": [
+                    ".previewCartList .previewCartItem"
+                ],
+                "soho": [
+                    ".quick-cart > article"
+                ],
+                "prosper": [
+                    ".cart-sidebar-details"
+                ],
+                "venture": [
+                    ".quick-cart .cart-content-area .quickcart-item .content-column"
+                ]
+            }, 
+            "mutations": {
+                "prosper": [
+                    "product-success"
+                ]
+            }
+        },
+        "cart_dropdown_qty_controls": {
+            "required": false,
+            "description": "Selector for cart navigation quantity controls",
+            "custom_class": "rca-cart-dropdown-qty-controls",
+            "selectors": {
+                "fortune": [
+                    ".quick-cart-item-actions"
+                ]
+            }
+        },
+        "cart_dropdown_totals": {
+            "required": false,
+            "description": "Selector for the dropdown total. Required only if is present in the theme",
+            "custom_class": "rca-cart-dropdown-totals",
+            "selectors": {
+                "default": [],
+                "roots": [
+                    ".dropdown-menu .previewCart .cart-preview-footer .cart-preview-pricing > div:last-child"
+                ],
+                "lifestyle": [
+                    ".total-price"
+                ],
+                "arcane": [
+                    ".dropdown-quick-cart .quick-cart-totals"
+                ],
+                "capacityBright": [
+                    ".cart-preview-footer .cart-preview-pricing"
+                ],
+                "fortune": [
+                    ".quick-cart-subtotal .total"
+                ],
+                "merchant": [
+                    ".mini-cart-footer-title .mini-cart-subtotal"
+                ],
+                "murad": [
+                    ".previewCartSubtotal .previewCartSubtotal-total"
+                ],
+                "soho": [
+                    ".quick-cart-total-wrapper"
+                ],
+                "prosper": [
+                    ".cart-sidebar-details [data-cart-grand-total]"
+                ],
+                "venture": [
+                    ".quick-cart .cart-footer .subtotal .total"
+                ]
+
+            }
+        },
+        "cart_dropdown_price": {
+            "required": true,
+            "description": "Selector for cart item price",
+            "custom_class": "rca-cart-dropdown-price",
+            "selectors": {
+                "default": [
+                    ".previewCartItem-content .previewCartItem-price"
+                ],
+                "arcane": [
+                    ".quick-cart-item-price-wrapper .quick-cart-item-price"
+                ],
+                "capacityBright": [
+                    ".cart-preview-list-item-price"
+                ],
+                "fortune": [
+                    ".quick-cart-content-column"
+                ],
+                "merchant": [
+                    ".mini-cart-inner .mini-cart-item-price"
+                ],
+                "murad": [
+                    ".previewCartItem-content .previewCartItem-price"
+                ],
+                "prosper": [
+                    ".cart-sidebar-item .item-details .item-price"
+                ],
+                "venture": [
+                    ".content-column .quickcart-item-footer .product-price .price:last-child"
+                ],
+                "soho": [
+                    "quick-cart-item-price-wrapper .quick-cart-item-price"
+                ]
+            }
+        },
+        "cart_dropdown_checkout": {
+            "required": true,
+            "description": "Selector for checkout button in cart navigation dropdown",
+            "custom_class": "rca-cart-dropdown-checkout",
+            "selectors": {
+                "default": [
+                    ".previewCartAction-checkout a"
+                ],
+                "arcane": [
+                    ".quick-cart-footer a:not(.secondary)"
+                ],
+                "capacityBright": [
+                    ".cart-preview-footer .button-primary "
+                ],
+                "fortune": [
+                    ".quick-cart-actions .checkout-button"
+                ],
+                "merchant": [
+                    ".mini-cart-inner .mini-cart-actions [href*=\"checkout\"]"
+                ],
+                "murad": [
+                    ".mini-cart-dropdown-menu .previewCartAction-checkout a"
+                ],
+                "cancerScreeningTrust": [
+                    ".mini-cart-footer .button-mini-cart[href*=\"checkout\"]"
+                ],
+                "prosper": [
+                    ".cart-sidebar-checkout > button"
+                ],
+                "venture": [
+                    ".cart-dropdown-container .quick-cart .cart-footer .actions .checkout-button"
+                ]
+            }
+        }
+    },
+    "cart_modal": {
+        "cart_modal_content": {
+            "required": true,
+            "description": "Selector for the preview modal in product page. Used to check mutations",
+            "custom_class": "rca-cart-modal-content",
+            "mode": "multi",
+            "selectors": {
+                "default": [
+                    "#previewModal .modal-content"
+                ],
+                "fortune": [
+                    "[data-product-cart-message]"
+                ],
+                "merchant": [
+                    ".modal-quick-shop .modal-content"
+                ],
+                "prosper": [
+                    ".product-message"
+                ],
+                "soho": [
+                    "[data-product-message]"
+                ]
+            },
+            "mutations": {
+                "fortune": [
+                    "alert-success"
+                ]
+            }
+        },
+        "cart_modal_price": {
+            "required": true,
+            "description": "Selector for preview modal price in product page.",
+            "custom_class": "rca-cart-modal-price",
+            "selectors": {
+                "default": [
+                    "#previewModal .modal-body .productView-price"
+                ],
+                "merchant": [
+                    ".success-item-wrap .success-item-price"
+                ]
+            }
+        },
+        "cart_modal_sub_text": {
+            "required": true,
+            "description": "Custom class for the subscription information text created by the adapter.",
+            "custom_class": "rca-cart-modal-sub-text",
+            "mode": "single",
+            "selectors": {
+                "default": [
+                    "#subAndSave"
+                ],
+                "merchant": [
+                    ".success-item-wrap .success-product-option"
+                ]
+            }
+        },
+        "cart_modal_subtotal": {
+            "required": true,
+            "description": "Selector for preview modal subtotal price.",
+            "custom_class": "rca-cart-modal-subtotal",
+            "selectors": {
+                "default": [
+                    ".previewCartCheckout-subtotal > .previewCartCheckout-price",
+                    ".previewCartCheckout strong"
+                ],
+                "merchant": [
+                    ".success-modal-title .success-modal-subtotal"
+                ]
+                
+            }
+        }
+    },
+    "category": {
+        "quick_view": {
+            "required": false,
+            "description": "Selector to check if a quickview button exist",
+            "custom_class": "rca-quick-view",
+            "selectors": {
+                "default": [
+                    ".quickview"
+                ],
+                "fortune": [
+                    ".product-item-actions .quick-shop-trigger"
+                ],
+                "merchant": [
+                    ".product-item-mask .product-item-actions button"
+                ],
+                "murad": [
+                    ".card-figcaption-body .card-figcaption-button"
+                ],
+                "soho": [
+                    ".product-item-grid .product-item-quickview",
+                    ".product-item-list .product-item-quickview"
+                ],
+                "prosper": [
+                    ".product-item .quick-shop-trigger"
+                ]
+            },
+            "mutations": {
+                "default": [
+                    "productView--quickView",
+                    "quickView"
+                ],
+                "fortune": [
+                    "quick-shop-details"
+                ],
+                "merchant": [
+                    "[data-quick-shop-product]"
+                ],
+                "soho": [
+                    "product-details"
+                ],
+                "prosper": [
+                    "product-details-wrapper"
+                ]
+            }
+        },
+        "cart_quick_link": {
+            "required": true,
+            "description": "Selector for quick add button for a product. Used in home and category page and if is present on the card grid",
+            "custom_class": "rca-cart-quick-link",
+            "selectors": {
+                "default": [
+                    ".productGrid .card-figcaption a[data-event-type=\"product-click\"]:not([data-product-id])",
+                    ".productCarousel .card-figcaption a[data-event-type=\"product-click\"]:not([data-product-id])"
+                ],
+                "merchant": [
+                    ".product-item-details [data-add-to-cart]"
+                ],
+                "murad": [
+                    ".productGrid .card-figcaption a[data-event-type=\"product-quick-click\"]:not([data-product-id])"
+                ],
+                "prosper": [
+                    ".product-item .product-item-thumbnail .quick-shop-trigger"
+                ]
+            }
+        },
+        "product_grid": {
+            "required": true,
+            "description": "Selector for product grid used in home/category page.",
+            "custom_class": "rca-productGrid",
+            "selectors": {
+                "default": [
+                    ".productGrid"
+                ],
+                "capacityBright": [
+                    ".product-grid"
+                ],
+                "merchant": [
+                    ".products-home [data-product-slider]"
+                ],
+                "fortune": [
+                    ".product-grid-container"
+                ],
+                "prosper": [
+                    ".category-wrapper .category > form"
+                ],
+                "soho": [
+                    ".products-featured .products-featured-items",
+                    ".product-listing-form .view-grid"
+                ]
+            }
+        }
+    },
+    "product": {
+        "product_view": {
+            "required": true,
+            "description": "Selector to check is the page is product view",
+            "custom_class": "rca-product-view",
+            "selectors": {
+                "default": [
+                    ".productView"
+                ],
+                "capacityBright": [
+                    "[data-product-container]"
+                ],
+                "fortune": [
+                    ".template-product, .quick-shop-details"
+                ],
+                "merchant": [
+                    ".quick-view-container [data-quick-shop-product]"
+                ],
+                "venture": [
+                    ".main-content .container.product-details .row"
+                ]
+            }
+        },
+        "product_subscription": {
+            "required": true,
+            "description": "Selector used to mount the adapter widget",
+            "custom_class": "rca-subscription",
+            "mode": "single",
+            "selectors": {
+                "default": [
+                    ".rca-product-view .form-action"
+                ],
+                "fab": [
+                    ".pdp-flex-section > .form-action:not(.qk-view)",
+                    "div.form-action.qk-view"
+                ],
+                "capacityBright": [
+                    ".form-submit-container"
+                ],
+                "fortune": [
+                    ".product-add-to-cart"
+                ],
+                "merchant": [
+                    ".product-actions"
+                ],
+                "soho": [
+                    ".product-details .form-actions"
+                ],
+                "prosper": [
+                    ".product-details .add-to-cart.form-field"
+                ],
+                "venture": [
+                    ".product-info-column form [data-product-add]"
+                ]
+            }
+        },
+        "product_price": {
+            "required": true,
+            "description": "Selector for the product price element",
+            "custom_class": "rca-product-price",
+            "mode": "single",
+            "selectors": {
+                "default": [
+                    ".productView [data-product-price-with-tax]",
+                    ".productView [data-product-price-without-tax]"
+                ],
+                "capacityBright": [
+                    ".product-header [data-product-price]"
+                ],
+                "fortune": [
+                    ".quick-shop-details .product-price .price-value",
+                    ".product-area .product-price .price-without-tax .price-value"
+                ],
+                "murad": [
+                    ".radio-item-container.price .label"
+                ],
+                "soho": [
+                    ".product-price .price-without-tax [data-product-price-wrapper] [data-product-price]",
+                    ".product-price .price-with-tax [data-product-price-wrapper] [data-product-price]"
+                ],
+                "prosper": [
+                    ".product-details-wrapper .product-price .price-value"
+                ]
+            },
+            "observers": {
+                "default": [
+                    ".rca-product-price"
+                ],
+                "fortune": [
+                    "[data-product-price]"
+                ],
+                "soho": [
+                    "[data-product-price]"
+                ]
+            }
+        },
+        "product_quantity": {
+            "required": false,
+            "description": "Selector for product quantity input",
+            "custom_class": "rca-product-quantity",
+            "selectors": {
+                "default": [
+                    "[data-quantity-change] input"
+                ],
+                "arcane": [
+                    "[data-quantity-control-input]"
+                ],
+                "soho": [
+                    "[data-product-quantity-input]"
+                ],
+                "prosper": [
+                    ".product-quantity"
+                ]
+            }
+        },
+        "product_id": {
+            "required": true,
+            "description": "Selector for the product id input in the add to cart form",
+            "custom_class": "rca-product-id",
+            "selectors": {
+                "default": [
+                    ".productView .productView-options input[name=product_id]"
+                ],
+                "capacityBright": [
+                    "input[name=product_id]"
+                ],
+                "prosper": [
+                    "input[name=product_id]"
+                ]
+            }
+        },
+        "product_variant_options": {
+            "required": true,
+            "description": "Selector for the option selectors for a product",
+            "custom_class": "rca-product-variant-options",
+            "selectors": {
+                "default": [
+                    ".productView-details .productView-options [data-product-option-change] .form-field"
+                ],
+                "capacityBright": [
+                    "[data-product-container] [data-product-option-change] .form-field"
+                ],
+                "fortune": [
+                    ".product-options .form-field-options"
+                ], 
+                "venture": [
+                    ".product-options-container .form-field-options"
+                ]
+            }
+        },
+        "product_variant_options_default": {
+            "required": true,
+            "description": "Selector for the default option selectors for a product. Required only if exist modifiers",
+            "custom_class": "rca-product-variant-options-default",
+            "selectors": {
+                "default": [
+                    ".productView-details .productView-options [data-product-option-change] .form-field [data-default]",
+                    ".productView-details .productView-options [data-product-option-change] .form-field [checked]"
+                ],
+                "arcane": [
+                    ".productView .product-details .form-field-options .form-input[checked]"
+                ],
+                "capacityBright": [
+                    "[data-product-container] [data-product-option-change] .form-field input[data-default]"
+                ],
+                "fortune": [
+                    ".product-options [data-product-attribute='input-checkbox']",
+                    ".product-options .form-field-radio"
+                ]
+
+            }
+        },
+        "product_variant_options_modifier": {
+            "required": true,
+            "description": "Selector for the modifiers option selectors for a product. Required only if exist modifiers",
+            "custom_class": "rca-product-variant-options-modifier",
+            "selectors": {
+                "default": [
+                    ".productView-details .productView-options [data-product-option-change] .form-field input[type=\"hidden\"]"
+                ],
+                "capacityBright": [
+                    "[data-product-container] [data-product-option-change] .form-field input"
+                ],
+                "fortune": [
+                    ".product-options .form-field-options",
+                    ".product-options .form-field-checkbox"
+                ]
+            }
+        },
+        "onetime_button": {
+            "required": false,
+            "description": "Class for the one time button of the adapter widget",
+            "custom_class": "rca-subscription-form-buttons-otp",
+            "selectors": {
+                "default": [
+                    ".rca-subscription-form-buttons-otp"
+                ]
+            }
+        },
+        "onetime_button_text": {
+            "required": false,
+            "description": "Class for the one time button text of the adapter widget",
+            "custom_class": "rca-subscription-form-buttons-otp-text",
+            "selectors": {
+                "default": [
+                    ".rca-subscription-form-buttons-otp-text"
+                ]
+            }
+        },
+        "onetime_button_price": {
+            "required": false,
+            "description": "Class for the one time button price of the adapter widget",
+            "custom_class": "rca-subscription-form-buttons-otp-price",
+            "selectors": {
+                "default": [
+                    ".rca-subscription-form__button--otp .rca-subscription-form__button-price"
+                ]
+            }
+        },
+        "subscription_button": {
+            "required": false,
+            "description": "Class for the subscription button of the adapter widget",
+            "custom_class": "rca-subscription-form__button--subscription",
+            "selectors": {
+                "default": [
+                    ".rca-subscription-form__button--subscription"
+                ]
+            }
+        },
+        "subscription_button_text": {
+            "required": false,
+            "description": "Class for the subscription button text of the adapter widget",
+            "custom_class": "rca-subscription-form-buttons-subscription-text",
+            "selectors": {
+                "default": [
+                    ".rca-subscription-form-buttons-subscription-text"
+                ]
+            }
+        },
+        "subscription_button_price": {
+            "required": false,
+            "description": "Class for the subscription button price of the adapter widget",
+            "custom_class": "rca-subscription-form__button-price",
+            "selectors": {
+                "default": [
+                    ".rca-subscription-form__button--subscription .rca-subscription-form__button-price"
+                ]
+            }
+        },
+        "subscription_checkbox": {
+            "required": false,
+            "description": "Class for the subscription checkbox of the adapter widget",
+            "custom_class": "rca-subscription-form-checkbox",
+            "selectors": {
+                "default": [
+                    ".rca-subscription-form-checkbox"
+                ]
+            }
+        },
+        "subscription_checkbox_input": {
+            "required": false,
+            "description": "Class for the subscription input of the adapter widget",
+            "custom_class": "rca-subscription-form-checkbox-input",
+            "selectors": {
+                "default": [
+                    ".rca-subscription-form-checkbox-input"
+                ]
+            }
+        },
+        "subscription_checkbox_combined_text": {
+            "required": false,
+            "description": "Class for the subscription checkbox with combined text of the adapter widget",
+            "custom_class": "rca-subscription-form-checkbox-combined-text",
+            "selectors": {
+                "default": [
+                    ".rca-subscription-form-checkbox-combined-text"
+                ]
+            }
+        },
+        "frequency_selector": {
+            "required": false,
+            "description": "Class for the frequency selector for the adapter widget",
+            "custom_class": "rca-subscription-form__frequency-selector",
+            "selectors": {
+                "default": [
+                    ".rca-subscription-form__frequency-selector"
+                ]
+            }
+        },
+        "frequency_option": {
+            "required": false,
+            "description": "Class for the frequency option selector for the adapter widget",
+            "custom_class": "rca-subscription-form__frequency-option",
+            "selectors": {
+                "default": [
+                    ".rca-subscription-form__frequency-option"
+                ]
+            }
+        },
+        "subscription_details": {
+            "required": false,
+            "description": "Class for the subscription details inserted in the preview modal and cart page",
+            "custom_class": "rca-sub-details",
+            "selectors": {
+                "default": [
+                    "#subAndSave"
+                ], 
+                "prosper": [
+                    ".cart-sidebar-item .item-details .item-title"
+                ]
+            }
+        }
+    },
+    "remove": {
+        "generic_remove": {
+            "required": false,
+            "description": "Use this class to remove an element with the adapter",
+            "custom_class": "rca-remove-element",
+            "selectors": {
+                "default": [],
+                "murad": [
+                    "#mobile-add-to-cart .rca-subscription"
+                ]
+            }
+        }
+    }
+}

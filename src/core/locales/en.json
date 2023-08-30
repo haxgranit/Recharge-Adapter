@@ -1,0 +1,24 @@
+{
+    "accounts": {
+        "manage_subscriptions_label": "Manage Subscriptions"
+    },
+    "products": {
+        "learnmore_verbiage": "Learn more...",
+        "onetime_message": "One-Time Purchase",
+        "subscribe_message": "Subscribe & Save",
+        "subscribe_without_discount_message": "Subscription",
+        "sub_and_save_ext_label": "on every recurring order",
+        "widget_deliver_every": "Delivery Every",
+        "how_it_works": "<p><strong>How subscriptions work</strong><p><br><p>Products are automatically delivered on your schedule. No obligation, modify or cancel your subscription anytime</p>",
+        "subscription_details_verbiage": "Subscription Details",
+        "shipping_interval_unit_type": "{\"days\":\"Days\",\"month\":\"Month\",\"months\":\"Months\",\"week\":\"Week\",\"weeks\":\"Weeks\"}",
+        "learnmore_url": "http://rechargepayments.com/subscribe-with-recharge",
+        "poweredby_url": "http://rechargepayments.com/subscribe-with-recharge",
+        "widget_charge_every": "Charge every"
+    },
+    "cart": {
+        "cart_sub_save_frequency_text": "Subscribe & Save: Every",
+        "cart_sub_frequency_text": "Subscription: Every"
+    }
+
+}

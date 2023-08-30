@@ -1,0 +1,83 @@
+{
+    "env": {
+        "jest": true,
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "extends": [
+        "prettier",
+        "plugin:vue/essential",
+        "eslint:recommended",
+        "@vue/prettier",
+        "plugin:jsdoc/recommended"
+    ],
+    "plugins": [
+        "prettier",
+        "jsdoc"
+    ],
+    "rules": {
+        "arrow-body-style": "off",
+        "linebreak-style": "off",
+        "consistent-return": "error",
+        "eqeqeq": [
+            "error",
+            "smart"
+        ],
+        "jsdoc/check-param-names": "error",
+        "jsdoc/no-undefined-types": "off",
+        "jsdoc/require-description-complete-sentence": "error",
+        "jsdoc/require-jsdoc": [
+            "error",
+            {
+                "require": {
+                    "ArrowFunctionExpression": false,
+                    "ClassDeclaration": true,
+                    "ClassExpression": true,
+                    "FunctionDeclaration": true,
+                    "FunctionExpression": true,
+                    "MethodDefinition": true
+                }
+            }
+        ],
+        "jsdoc/require-param-description": "error",
+        "jsdoc/require-param-type": "error",
+        "jsdoc/require-property-description": "error",
+        "jsdoc/require-returns": "error",
+        "jsdoc/require-returns-type": "error",
+        "jsdoc/require-returns-description": "off",
+        "jsdoc/require-throws": "error",
+        "jsdoc/valid-types": "warn",
+        "jsdoc/tag-lines": "off",
+        "jsdoc/newline-after-description": "off",
+        "no-else-return": "error",
+        "no-return-await": "off",
+        "no-useless-return": "error",
+        "prefer-arrow-callback": "off",
+        "prefer-promise-reject-errors": "error",
+        "prettier/prettier": ["error", {
+            "endOfLine": "auto"
+        }],
+        "require-await": "warn",
+        "vue/valid-template-root": "warn"
+    },
+
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 11,
+        "parser": "babel-eslint"
+    },
+    "root": true,
+    "overrides": [
+        {
+            "files": [
+                "**/__tests__/*.{j,t}s?(x)",
+                "**/tests/unit/**/*.spec.{j,t}s?(x)"
+            ]
+        }
+    ],
+    "globals": {
+        "RCA_DATA": "readonly",
+        "RCA_LOCALES": "readonly"
+    }
+}
